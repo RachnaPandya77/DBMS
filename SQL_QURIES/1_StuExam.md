@@ -2,4 +2,4 @@
 
 <hr>
 
-![exam](SQL QURIES\Image\Exam.png)
+![exam](SQL_QURIES\Image\Exam.png)
