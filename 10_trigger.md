@@ -8,3 +8,9 @@
 
 1. Row-Level Triggers
 2. Statement-Level Triggers
+
+**Events that Trigger Execution**
+
+1. INSERT
+2. UPDATE
+3. DELETE
