@@ -32,3 +32,20 @@ INSERT INTO incentive(employee_ref_id, Incentive_date, Incentive_amount) VALUES
 ## Output Image
 
 ![Output-image](incentive.png)
+
+<hr>
+<hr>
+
+## Get First_Name from employee table using Tom name “Employee Name”.
+
+![Output-image](q3.png)
+
+## Get FIRST_NAME, Joining Date, and Salary from employee table.
+
+```
+SELECT first_name, joining_date, salary FROM employee;
+```
+
+## Output
+
+![Output-image](q4.png)
