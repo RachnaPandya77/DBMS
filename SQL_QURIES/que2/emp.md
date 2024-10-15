@@ -2,10 +2,6 @@
 
 <hr>
 
-## Output Image
-
-![Output-image](emp.png)
-
 **Employee Table**
 
 ```
@@ -17,6 +13,10 @@ VALUES(1, 'John', 'Abraham', 1000000, '2023-01-01 12 00 00', 'Banking'),
 (7, 'Naina' , 'Talwar', 650000, '2013-02-01 12:00:00', 'Services'),
 (8, 'Kabir', 'Singh', 700000, '2013-02-01 12:00:00', 'Services');
 ```
+
+## Output Image
+
+![Output-image](emp.png)
 
 **Incentive Table**
 
@@ -36,11 +36,11 @@ INSERT INTO incentive(employee_ref_id, Incentive_date, Incentive_amount) VALUES
 <hr>
 <hr>
 
-## Get First_Name from employee table using Tom name “Employee Name”.
+## 3. Get First_Name from employee table using Tom name “Employee Name”.
 
 ![Output-image](q3.png)
 
-## Get FIRST_NAME, Joining Date, and Salary from employee table.
+## 4. Get FIRST_NAME, Joining Date, and Salary from employee table.
 
 ```
 SELECT first_name, joining_date, salary FROM employee;
@@ -49,3 +49,51 @@ SELECT first_name, joining_date, salary FROM employee;
 ## Output
 
 ![Output-image](q4.png)
+
+## 5. Get all employee details from the employee table order by First_Name Ascending and Salary descending?
+
+```
+SELECT* FROM employee
+ORDER BY first_name ASC, salary DESC;
+```
+
+## Output
+
+![Output-image](q5.png)
+
+## 6. Get employee details from employee table whose first name contains ‘J’.
+
+```
+SELECT* FROM employee
+WHERE first_name LIKE '%J%';
+```
+
+## Output
+
+![Output-image](q6.png)
+
+## 7. Get department wise maximum salary from employee table order by salary ascending?
+
+```
+SELECT department, MAX(salary) AS maxsalary
+FROM employee
+GROUP BY department
+ORDER BY maxsalary ASC;
+```
+
+## Output
+
+![Output-image](q7.png)
+
+## 9. Select first_name, incentive amount from employee and incentives table for those employees who have incentives and incentive amount greater than 3000
+
+```
+SELECT e.first_name, i.Incentive_amount
+FROM employee e
+JOIN incentive i ON e.employee_id = i.employee_ref_id
+WHERE i.Incentive_amount > 3000;
+```
+
+## Output
+
+![Output-image](q9.png)
