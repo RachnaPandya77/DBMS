@@ -97,3 +97,7 @@ WHERE i.Incentive_amount > 3000;
 ## Output
 
 ![Output-image](q9.png)
+
+## Create After Insert trigger on Employee table which insert records in view table
+
+
