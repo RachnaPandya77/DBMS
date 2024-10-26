@@ -98,3 +98,17 @@ order by pro_price desc , pro_name asc;
 ![Output-image](pro_price.png)
 
 <hr>
+
+## 24. From the following table, write a SQL query to calculate average price of the items for each company. Return average price and company code.
+
+```
+select pro_com, avg(pro_price) as avg_price
+from salseman.item_mast
+group by PRO_com;
+```
+
+<hr>
+
+## Output Image
+
+![Output-image](q24.png)
