@@ -71,18 +71,13 @@ SELECT * FROM salseman.customer WHERE Rating > 100;
 
 <hr>
 
-## 14. Names and cities of all salespeople in London with commission above 0.12 0.15
+## 14. Names and cities of all salespeople in London with commission above 0.12
 
 ```
-SELECT
-salseperson.Sname,
-salseperson.City
-FROM
-salseman.salseperson
-WHERE
-(salseperson.City = 'London')
-AND
-(salseperson.Comm = 0.12 OR salseperson.Comm = 0.15);
+SELECT SNAME, CITY
+FROM salseman.salseperson
+WHERE CITY = 'London'
+AND COMM >= 0.12;
 ```
 
 ## Output Image

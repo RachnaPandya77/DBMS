@@ -1,6 +1,16 @@
 ## Table : Orders
 
 ```
+CREATE TABLE orders (
+    ord_no INT,
+    purch_amt DECIMAL(10,2),
+    ord_date DATE,
+    customer_id INT,
+    salesman_id INT
+);
+```
+
+```
 INSERT INTO `salseman`.`orders` (`ord_no`, `purch_amt`, `ord_date`, `customer_id`, `salesman_id`)
 VALUES
 (70001, 150.5, '2012-10-05', 3005, 5002),
