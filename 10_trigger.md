@@ -15,12 +15,14 @@ END;
 
 **Types of Triggers**
 
+```
 BEFORE INSERT: Triggered before a new row is inserted into a table
 AFTER INSERT: Triggered after a new row is inserted into a table
 BEFORE UPDATE: Triggered before a new row is updated into a table
 AFTER UPDATE: Triggered after a new row is updated into a table
 BEFORE DELETE: Triggered before a new row is deleted into a table
 AFTER DELETE: Triggered after a new row is deleted into a table
+```
 
 **Events that Trigger Execution**
 
@@ -30,6 +32,7 @@ AFTER DELETE: Triggered after a new row is deleted into a table
 
 **Example**
 
+```
 DELIMITER //
 CREATE trigger addlog
 AFTER INSERT ON employee
@@ -40,3 +43,4 @@ INSERT INTO viewlog
 VALUES
 ('insert', NOW(), 1);
 END //
+```
