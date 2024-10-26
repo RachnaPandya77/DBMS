@@ -5,6 +5,17 @@
 **Employee Table**
 
 ```
+CREATE TABLE Employee (
+    Employee_id INT PRIMARY KEY,
+    First_name VARCHAR(50),
+    Last_name VARCHAR(50),
+    Salary INT,
+    Joining_date DATE,
+    Department VARCHAR(50)
+);
+```
+
+```
 INSERT INTO employee(employee_id, first_name, last_name, salary, joining_date, department)
 VALUES(1, 'John', 'Abraham', 1000000, '2023-01-01 12 00 00', 'Banking'),
 (4, 'Tom', 'Jose', 600000, '2013-02-01 12:00:00', 'Insurance'),
@@ -19,6 +30,14 @@ VALUES(1, 'John', 'Abraham', 1000000, '2023-01-01 12 00 00', 'Banking'),
 ![Output-image](emp.png)
 
 **Incentive Table**
+
+```
+CREATE TABLE Incentive (
+    Employee_ref_id INT,
+    Incentive_date DATE,
+    Incentive_amount INT
+);
+```
 
 ```
 INSERT INTO incentive(employee_ref_id, Incentive_date, Incentive_amount) VALUES
@@ -99,5 +118,3 @@ WHERE i.Incentive_amount > 3000;
 ![Output-image](q9.png)
 
 ## Create After Insert trigger on Employee table which insert records in view table
-
-
