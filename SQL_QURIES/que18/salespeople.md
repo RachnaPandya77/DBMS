@@ -1,6 +1,10 @@
 ## Write a SQL statement that displays all the information about all salespeople
 
 ```
+CREATE DATABASE salseman;
+```
+
+```
 CREATE TABLE `salseman`.`salespeople` (
   `salesman_id` INT NOT NULL,
   `name` VARCHAR(45) NOT NULL,

@@ -3,6 +3,10 @@
 ## Salesperson :
 
 ```
+CREATE DATABASE salseman;
+```
+
+```
 CREATE TABLE `salseman`.`salseperson` (
   `Sno` INT NOT NULL,
   `Sname` VARCHAR(45) NOT NULL,

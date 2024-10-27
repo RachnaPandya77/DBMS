@@ -1,6 +1,10 @@
 ## Table : Orders
 
 ```
+CREATE DATABASE salseman;
+```
+
+```
 CREATE TABLE orders (
     ord_no INT,
     purch_amt DECIMAL(10,2),
