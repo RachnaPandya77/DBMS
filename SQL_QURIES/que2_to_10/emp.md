@@ -118,3 +118,39 @@ WHERE i.Incentive_amount > 3000;
 ![Output-image](q9.png)
 
 ## Create After Insert trigger on Employee table which insert records in view table
+
+**Create_View_Table**
+
+```
+CREATE TABLE view_table (
+    Employee_Id INT,
+    First_Name VARCHAR(50),
+    Last_Name VARCHAR(50),
+    Salary INT,
+    Joining_date DATE,
+    Department VARCHAR(50)
+);
+```
+
+```
+CREATE TRIGGER insert_into_view_table
+AFTER INSERT ON Employee
+FOR EACH ROW
+BEGIN
+  INSERT INTO view_table (Employee_Id, First_Name, Last_Name, Salary, Joining_date, Department)
+  VALUES (NEW.Employee_Id, NEW.First_Name, NEW.Last_Name, NEW.Salary, NEW.Joining_date, NEW.Department);
+END;
+```
+
+**insert the following record into the Employee table:**
+
+```
+INSERT INTO Employee (Employee_Id, First_Name, Last_Name, Salary, Joining_date, Department)
+VALUES (9, 'Rachna', 'Pandya', 60000, '2023-11-22', 'IT');
+```
+
+**The trigger will automatically insert the following record into the view table**
+
+## Output
+
+![Output-image](trigger.png)
